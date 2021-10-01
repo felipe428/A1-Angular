@@ -1,1 +1,39 @@
-<p>Currency Works</p>
+<h1>Currency</h1>
+
+<div>
+  <table>
+    <tr>
+      <th>USD</th>
+    </tr>
+    <tr *ngFor="let rate of this.wallet.USDeBRLlist">
+      <td>
+        $ {{ (rate.bpi.BRL.rate_float / rate.bpi.USD.rate_float).toFixed(3) }}
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>EUR</th>
+    </tr>
+    <tr *ngFor="let rate of this.wallet.USDeBRLlist; index as i">
+      <td>
+        €
+        {{
+          (
+            rate.bpi.BRL.rate_float / this.wallet.EURlist[i].bpi.EUR.rate_float
+          ).toFixed(3)
+        }}
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>BTN</th>
+    </tr>
+    <tr *ngFor="let rate of this.wallet.USDeBRLlist">
+      <td>₿ {{ rate.bpi.BRL.rate_float }}</td>
+    </tr>
+  </table>
+</div>
