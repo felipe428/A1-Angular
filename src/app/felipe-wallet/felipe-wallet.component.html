@@ -4,9 +4,11 @@
   <b>Informe um valor em R$:</b>
   <input class="form-control" type="number" #valor />
 
+  <br />
   <button (click)="somar(valor.value); valor.value = ''">Adcionar</button>
   <button (click)="subtrair(valor.value); valor.value = ''">Subtrair</button>
 
+  <br /><br />
   <li>₿ {{ this.wallet.getSaldo() }}</li>
   <li>$ {{ this.wallet.getDolar() }}</li>
   <li>€ {{ this.wallet.getEuro() }}</li>
