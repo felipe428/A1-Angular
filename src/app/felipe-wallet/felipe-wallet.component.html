@@ -1,1 +1,14 @@
-<p>Wallet Works</p>
+<h1>Wallet</h1>
+
+<div>
+  <b>Informe um valor em R$:</b>
+  <input class="form-control" type="number" #valor />
+
+  <button (click)="somar(valor.value); valor.value = ''">Adcionar</button>
+  <button (click)="subtrair(valor.value); valor.value = ''">Subtrair</button>
+
+  <li>₿ {{ this.wallet.getSaldo() }}</li>
+  <li>$ {{ this.wallet.getDolar() }}</li>
+  <li>€ {{ this.wallet.getEuro() }}</li>
+  <li>R$ {{ this.wallet.getReal() }}</li>
+</div>

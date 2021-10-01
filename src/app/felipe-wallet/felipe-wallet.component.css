@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+
+button {
+  background-color: #1d8d36;
+  color: white;
+  margin: 1px;
+}
+
+li {
+  margin-left: 0.5em;
+}
