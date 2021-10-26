@@ -3,16 +3,16 @@
 <!--Por favor, carregar o Currency antes de usar o Wallet.-->
 
 <div>
-  <b>Informe um valor em R$:</b>
-  <input class="form-control" type="number" #valor />
+  <b>Informe um valor em R$:</b> <br />
+  <input #brl type="number" step="0.01" #valor />
 
-  <br />
+  <br /><br />
   <button (click)="somar(valor.value); valor.value = ''">Adcionar</button>
   <button (click)="subtrair(valor.value); valor.value = ''">Subtrair</button>
 
   <br /><br />
-  <li>₿ {{ this.wallet.getSaldo() }}</li>
-  <li>$ {{ this.wallet.getDolar() }}</li>
-  <li>€ {{ this.wallet.getEuro() }}</li>
-  <li>R$ {{ this.wallet.getReal() }}</li>
+  <li>₿ {{ wallet.saldo }} BTC</li>
+  <li>$ {{ wallet.getBTCinUSD() }} USD</li>
+  <li>€ {{ wallet.getBTCinEUR() }} EUR</li>
+  <li>R$ {{ wallet.getBTCinBRL() }} BRL</li>
 </div>

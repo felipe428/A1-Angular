@@ -35,21 +35,8 @@
             >Wallet</a
           >
         </li>
-        <li class="arrows">
-          Dólar
-          <span>↑</span>
-          <span>↓</span>
-        </li>
-        <li class="arrows">
-          Euro
-          <span>↑</span>
-          <span>↓</span>
-        </li>
-        <li class="arrows">
-          Bitcoin
-          <span>↑</span>
-          <span>↓</span>
-        </li>
+        <span *ngIf="wallet.dif > 0" style="color: green">↑</span>
+        <span *ngIf="wallet.dif < 0" style="color: red">↓</span>
       </ul>
     </div>
   </div>

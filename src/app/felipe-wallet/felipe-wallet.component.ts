@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FelipeWalletService } from '../felipe-wallet.service';
 
 @Component({
@@ -7,8 +7,6 @@ import { FelipeWalletService } from '../felipe-wallet.service';
   styleUrls: ['./felipe-wallet.component.css'],
 })
 export class FelipeWalletComponent implements OnInit {
-  @Input() valor: number;
-
   constructor(public wallet: FelipeWalletService) {}
 
   ngOnInit() {}

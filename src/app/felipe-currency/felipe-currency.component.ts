@@ -9,21 +9,5 @@ import { FelipeWalletService } from '../felipe-wallet.service';
 export class FelipeCurrencyComponent implements OnInit {
   constructor(public wallet: FelipeWalletService) {}
 
-  ngOnInit() {
-    this.wallet.updateUSDeBRL();
-    this.wallet.updateEUR();
-    this.wallet.interval();
-  }
-
-  updateUSDeBRL() {
-    this.wallet.updateUSDeBRL;
-  }
-
-  updateEUR() {
-    this.wallet.updateEUR();
-  }
-
-  interval() {
-    this.wallet.interval();
-  }
+  ngOnInit() {}
 }
